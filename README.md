@@ -1,4 +1,4 @@
-# How to inject a mock or fake for an injected dependency using Dagger 2.10/2.11 and its AndroidInjector?
+# How to inject a mock or fake for an injected dependency using Dagger and Dagger.Android Versions: 2.10 / 2.11 and its AndroidInjector?
 
 This project presents a complete solution of an Android problem I had, when trying to replace components in integration tests injected by Dagger 2.11 with AndroidInjector. 
 
