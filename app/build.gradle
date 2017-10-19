@@ -34,6 +34,8 @@ dependencies {
 
     annotationProcessor "com.google.dagger:dagger-compiler:2.11"
     annotationProcessor "com.google.dagger:dagger-android-processor:2.11" //new
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:2.11"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-android-processor:2.11"
     compile "com.google.dagger:dagger:2.11"
     compile "com.google.dagger:dagger-android:2.11" //new
     compile "com.google.dagger:dagger-android-support:2.11" //new
@@ -42,5 +44,4 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-all:1.10.19'
-
 }

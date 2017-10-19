@@ -12,6 +12,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 import minsky.question.app.di.ActivityBindingModule;
 import minsky.question.app.di.AppComponent;
 
+
 @Singleton
 @Component(modules = {
         TestAppModule.class,
