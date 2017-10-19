@@ -2,7 +2,7 @@
 
 This project presents a complete solution of an Android problem I had, when trying to replace components in integration tests injected by Dagger 2.11 with AndroidInjector. 
 
-The git hub repository was initially create to prepare for a question on StackOverflow. While writing the problem and every single problem in my implementation got solved. So the question never appeared @ StackOverflow. The code works as of October 2017. 
+The git hub repository was initially created to prepare for a question on StackOverflow. While writing the problem, stumbling in SO again, every single problem in my implementation got solved. So the question never appeared @ StackOverflow. The code works as of October 2017. 
 
 ### Here some notes and errors follow, which occurred and were solved or workarounded in the process of implementing this solution:
 
