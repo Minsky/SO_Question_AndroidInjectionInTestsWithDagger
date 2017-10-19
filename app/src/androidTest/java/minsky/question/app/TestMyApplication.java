@@ -2,6 +2,8 @@ package minsky.question.app;
 
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
+import minsky.question.app.di.AppComponent;
+import minsky.question.app.di.DaggerAppComponent;
 
 public class TestMyApplication extends DaggerApplication {
 

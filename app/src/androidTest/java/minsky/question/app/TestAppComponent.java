@@ -11,16 +11,17 @@ import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
 import minsky.question.app.di.ActivityBindingModule;
 import minsky.question.app.di.AppComponent;
+import minsky.question.app.di.AppModule;
 
 
 @Singleton
 @Component(modules = {
-        TestAppModule.class,
+        AppModule.class,
         TestNetworkApiModule.class,
         ActivityBindingModule.class,
         AndroidSupportInjectionModule.class
 })
-public interface TestAppComponent extends AndroidInjector<DaggerApplication> {
+public interface TestAppComponent extends AppComponent {
 
     void inject(TestMyApplication app);
 

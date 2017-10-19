@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.test.runner.AndroidJUnitRunner;
 
+import org.junit.runner.RunWith;
 
 public class MyTestRunner extends AndroidJUnitRunner {
 
