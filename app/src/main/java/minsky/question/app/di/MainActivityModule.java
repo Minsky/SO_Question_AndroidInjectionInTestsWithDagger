@@ -10,5 +10,5 @@ import minsky.question.app.MainActivity;
 public abstract class MainActivityModule {
     @Binds
     @ActivityScoped
-    abstract Activity activity(MainActivity productsActivity);
+    abstract Activity activity(MainActivity mainActivity);
 }
