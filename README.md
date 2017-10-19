@@ -1,5 +1,5 @@
 # SO_Question_AndroidInjectionInTestsWithDagger
-Project for presenting complete project solution with a Android problem, when trying to test components injected by Dagger 
+Project for presenting the complete solution with an Android problem, when trying to test components injected by Dagger 2.11 with AndroidInjector. 
 
 How to inject a mock or fake for an injected dependency using Dagger 2.10/2.11 and its AndroidInjector?
 
