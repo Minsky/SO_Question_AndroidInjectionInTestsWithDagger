@@ -11,15 +11,17 @@ I go from latest solved problem to first one
 Test running startedTest running failed: Unable to find instrumentation info for: ComponentInfo{android ... AndroidJUnitRunner}. This happens, when the in build.gradle the path to the testInstrumentationRunner is not set, or not correclty set. It also happens, when you change the testRunner and already have some Run configurations in your IDE, using older testInstrumentation settings from gradle. Changeing the testInstrumentationRunner in gradle, doesn't update the configurations. You have to delete them and recreate them. Another typo-like error was to use the @RunWith-Annotation above my own TestRunner class (MyTestRunner.java).
 
 2. To tell Dagger, that it has to generate code in the test directories of your project you have to add the lines: 
-..* androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:2.11"
-..* androidTestAnnotationProcessor "com.google.dagger:dagger-android-processor:2.11"
+```
+  androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:2.11"
+  androidTestAnnotationProcessor "com.google.dagger:dagger-android-processor:2.11"
+ ```
 
 3. This solutions overrides the Dagger setup of the production code, but not any part of it:
 Concrete:
-..* There is TestMyApplication, which still extends from DaggerApplication
-..* TestAppComponent extends AppComponent and contains the list of alternative Module classes, especially our TestNetworkApiModule for overriding the NetworkApi.
-..* TestNetworkApiModule overrides the provideNetworkAPI method with a fake
-..* AppModule is not extended, because we want to use the original context
+* There is TestMyApplication, which still extends from DaggerApplication
+* TestAppComponent extends AppComponent and contains the list of alternative Module classes, especially our TestNetworkApiModule for overriding the NetworkApi.
+* TestNetworkApiModule overrides the provideNetworkAPI method with a fake
+* AppModule is not extended, because we want to use the original context
 
 4. Your test folder should contain an own AndroidManifest.xml, which states your TestApplication in this case TestMyApplication. Without it, your TestApplication won't be found and the system uses your normal application (MyApplication in this sample).
 
