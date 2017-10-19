@@ -1,10 +1,10 @@
-# SO_Question_AndroidInjectionInTestsWithDagger
-How to inject a mock or fake for an injected dependency using Dagger 2.10/2.11 and its AndroidInjector?
+# How to inject a mock or fake for an injected dependency using Dagger 2.10/2.11 and its AndroidInjector?
 
-Project for presenting the complete solution of a Android problem I had, when trying to replace components in integration tests injected by Dagger 2.11 with AndroidInjector. 
+This project presents a complete solution of an Android problem I had, when trying to replace components in integration tests injected by Dagger 2.11 with AndroidInjector. 
 
-The problem got solved, without asking the question @StackOverflow. The code works as of October 2017. 
-Same notes and errors, which occurred and were solved or workarounded in the process of implementing this solution.
+The git hub repository was initially create to prepare for a question on StackOverflow. While writing the problem and every single problem in my implementation got solved. So the question never appeared @ StackOverflow. The code works as of October 2017. 
+
+### Here some notes and errors follow, which occurred and were solved or workarounded in the process of implementing this solution:
 
 I go from latest solved problem to first one
 1. When right-clicking on the specific test: MainActivityTest.afterStartEmptyPageMessageisDisplayed() in the Android Studio IDE, I got:
