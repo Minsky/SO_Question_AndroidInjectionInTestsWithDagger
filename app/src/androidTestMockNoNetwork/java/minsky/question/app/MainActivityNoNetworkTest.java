@@ -12,12 +12,11 @@ import org.junit.runner.RunWith;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static minsky.question.app.ImmediateResponseNetwork.EMPTY_PAGE;
 
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest
-{
+public class MainActivityNoNetworkTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mainActivityTestRule = new ActivityTestRule<>(MainActivity.class, true, false);
@@ -29,8 +28,8 @@ public class MainActivityTest
     }
 
     @Test
-    public void afterStartEmptyPageMessageIsDisplayed() throws Exception
+    public void afterStartNetworkErrorMessageIsDisplayed() throws Exception
     {
-        onView(withText(EMPTY_PAGE)).check(matches(isDisplayed())); // mocked network responses always with this text.
+        onView(withText("Network Error!")).check(matches(isDisplayed()));
     }
 }
