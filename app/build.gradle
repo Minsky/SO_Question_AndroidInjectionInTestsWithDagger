@@ -18,6 +18,31 @@ android {
         }
     }
 
+    flavorDimensions "default"
+
+    productFlavors {
+        mockNoNetwork {
+            dimension = "default"
+            applicationIdSuffix = ".mockNoNetwork"
+        }
+        mockImmediateNetwork {
+            dimension = "default"
+            applicationIdSuffix = ".mockImmediateNetwork"
+        }
+        prod {
+            dimension = "default"
+        }
+
+        // Remove mock....Release as it's not needed.
+        android.variantFilter { variant ->
+            if (variant.buildType.name == 'release'
+                    && (variant.getFlavors().get(0).name == 'mockNoNetwork' ||
+                        variant.getFlavors().get(0).name == 'mockImmediateNetwork')) {
+                variant.setIgnore(true)
+            }
+        }
+    }
+
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
     }

@@ -1,4 +1,4 @@
-package minsky.question.app;
+package minsky.question.app.di;
 
 import minsky.question.app.network.NetworkApi;
 
