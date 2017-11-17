@@ -10,6 +10,6 @@ import minsky.question.app.network.NetworkApi;
 public class NetworkApiModule {
     @Provides
     static NetworkApi provideNetworkApi(Context context) {
-        return new UnresponsiveNetworkModule();
+        return new UnResponsiveNetwork();
     }
 }

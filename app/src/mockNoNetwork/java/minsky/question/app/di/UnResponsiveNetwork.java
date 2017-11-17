@@ -1,25 +1,14 @@
-package minsky.question.app;
-
-import android.support.annotation.NonNull;
+package minsky.question.app.di;
 
 import minsky.question.app.network.NetworkApi;
 
-public class ImmediateResponseNetwork implements NetworkApi
+public class UnResponsiveNetwork implements NetworkApi
 {
-    public static final String EMPTY_PAGE = "Empty Page";
-
-    private String response;
     private int countNetworkRequestCalls;
 
-    public ImmediateResponseNetwork()
+    public UnResponsiveNetwork()
     {
-        response = null;
         countNetworkRequestCalls = 0;
-    }
-
-    public void setResponse(String response)
-    {
-        this.response = response;
     }
 
     public boolean wasNetworkRequestCalled()
@@ -34,6 +23,6 @@ public class ImmediateResponseNetwork implements NetworkApi
 
     @Override
     public void doRequestForData(MySampleRequestCallback requestCallback) {
-        requestCallback.onResponseReceived("Empty Page");
+        requestCallback.onNetworkError();
     }
 }
